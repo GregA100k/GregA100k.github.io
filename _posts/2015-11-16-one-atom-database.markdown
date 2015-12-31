@@ -126,4 +126,5 @@ to get the macro to work as I do trying to code the feature I want,
 so I'm going to switch to using functions to design the api and once 
 the overall api design is complete, I'll re-evaluate if macros are a better fit.
 
-In the next post, I'll add 'or' logic and allow for a combination of ands and ors.
+In the next post, I'll add 'or' logic and allow for 
+a [combination of and's and or's]({% post_url 2015-12-23-one-atom-database-combining-operators %})

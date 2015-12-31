@@ -101,4 +101,4 @@ be nested to build up complex queries.
 
 What's Next
 ===========
-Joining data from different lists of maps.
+[Joining data from different lists of maps]({% post_url 2015-12-29-one-atom-database-joins %})
