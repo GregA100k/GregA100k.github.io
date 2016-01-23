@@ -82,5 +82,5 @@ any keys in common.
 
 What's Next
 ===========
-Either multiple join conditions should be allowed or fixing the common key
-problem.
+Either multiple join conditions should be allowed or [fixing the common key
+problem]({% post_url 2016-01-22-one-atom-database-join-keys %}).
