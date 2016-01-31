@@ -37,4 +37,4 @@ maps have keys in common has been fixed..
 
 What's Next
 ===========
-Inserts and updates.
+[Inserts and updates.]({% post_url 2016-01-30-one-atom-database-inserts %})
