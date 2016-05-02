@@ -1,0 +1,70 @@
+---
+layout: post
+title:  "HappyTweet Word Stemming"
+date:   2016-05-01 22:00:00
+categories: happytweet
+tags: sentiment happytweet
+---
+
+HappyTweet So Far
+=================
+[Iteration one]({% post_url 2016-04-18-intro-to-happytweet %})
+was the simplest sentiment analysis algorithm I could
+think of.  It looked up a sentiment score for each word from a database
+and added the scores of all the words in a tweet.  The initial results
+were not great.
+
+|Actual Score | Correct | Incorrect | Total | Percent Correct|
+|-------------|--------:|----------:|------:|---------------:|
+|Positive     | 124     |  58       | 182   |  68%           |
+|Negative     | 46      |  131      | 177   |  26%           |
+|Neutral      | 60      |  79       | 139   |  43%           |
+|Total        | 230     |  268      | 498   |  46%           |
+
+ It felt like maybe there weren't that many words that were actually 
+being scored but that was just a hunch.  Collecting data proved out that 
+the hunch was correct and only 933 of the 5759 words from the tweets 
+matched scored words from the table. 
+
+Stemming
+========
+[Stemming](https://en.wikipedia.org/wiki/Stemming) is a way to reduce a word
+form down to its root form, or stem.  The hope was that by comparing the 
+word stems, there would be more matches and the results would improve.
+
+There were several existing choices of libraries to do this. I used 
+[clj-tokenizer](https://github.com/eandrejko/clj-tokenizer) to stem
+both the list of scored words and the words in the tweets  which increased
+the number of words which actually contributed to the scoring from 933 
+up to 1636. 
+
+Overall, scoring more words had a positive impact, but it did produce
+some curious results. 
+
+|Actual Score | Correct | Incorrect | Total | Percent Correct|
+|-------------|--------:|----------:|------:|---------------:|
+|Positive     | 147     |  35       | 182   |  81%           |
+|Negative     | 57      |  120      | 177   |  32%           |
+|Neutral      | 37      |  102      | 139   |  26%           |
+|Total        | 241     |  257      | 498   |  48%           |
+
+The curious thing is the drop in scoring the neutral tweets. Also, the
+number of positive tweets scored correctly is much higher than either 
+negative or neutral tweets.  I have a guess as to why the neutral tweets
+went lower, but will need some data to see if it is correct.
+
+What's Next
+===========
+At this point, there are more questions being generated than answers.  I'll
+probably research the drop in neutral tweet correctness.  
+
+Adding the second algorithm resulted in a lot of duplicated code in the 
+runner program.  Before adding any other algorithms, I'd like to refactor 
+that code to remove the duplication.  There is also duplicated code between
+the two algorithms.  As new algorithms are added, I want to be able to 
+continue to run the old ones.  That means I can't just improve the code as
+I go along.  In an Object Oriented world, inheritance would solve that 
+problem.  I'll have to learn how to do that in a functional world.
+
+The next algorithm change I'd like to look at involves using word vectors 
+to find similar words for words that are not in the scored words table. 

@@ -66,7 +66,8 @@ scored correctly.
 What's Next
 ===========
 First, I'd like to look at ways to increase the number of words that affect
-the score.  I'm thinking about finding a library that calculates lemmas so that
+the score.  I'm thinking about finding a library that 
+[calculates lemmas]({% post_url 2016-05-01-stemming %}) so that
 simple variations of words can be converted into the standard form that has
 been scored.  Another approach to that same problem is to use word vectors
 to find similar words that are scored.
