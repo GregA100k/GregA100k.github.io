@@ -2,7 +2,7 @@
 layout: post
 title:  "Clojure Help Chrome Extension"
 date:   2017-03-12 12:00:00
-categories: halite
+categories: clojure
 tags: clojure clojurescript chrome extension programming
 ---
 Overview
