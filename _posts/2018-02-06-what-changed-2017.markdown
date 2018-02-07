@@ -1,0 +1,66 @@
+---
+layout: post
+title:  "What Changed in 2017"
+date:   2018-02-06 12:00:00
+categories: proramming
+tags: programming
+---
+
+I stumbled upon Fogus' [The best things and stuff of 2017](http://blog.fogus.me/2018/01/02/the-best-things-and-stuff-of-2017/)
+and thought I should do something similar.  Before I pick any favorites for the last year, I wanted to see what type of things
+I worked on in 2017, so I hit the git logs for a list of all the files that I commited
+between january 1, 2017 and December 31, 2017.  From that list, I aggregated a list of all the file extensions,  14 in total.
+
+Work
+====
+
+* .java
+* .clj
+* .sql
+
+* .sh
+* .bat
+
+* .csv
+* .xlsx
+* .impex
+* .xml
+   *  data
+   *  spring.xml
+   *  items.xml
+   *  build.xml
+
+* .feature
+* .project
+* .ini
+* .properties
+* .jar
+
+I have grouped these files by more of a meta type like programming languages or data etc.  and separated the xml files
+since data files are different from [ant](http://ant.apache.org/) build files or [spring](https://spring.io/) configurations.  
+
+I should probably point out that the only reason .feature files are included is because I cleaned 
+up some old [Cucumber](https://cucumber.io/) test expermiments that had been commited in the past.
+
+Outside of Work
+===============
+* .clj
+* .cljs
+* .java
+* .markdown
+* .yml
+* .txt
+* .dia
+* .jpg
+* .png
+* .json
+* .html
+* .js
+
+
+Twelve file types were changed for projects outside of work with 10 of those 12 not part of the work list.  I almost 
+forgot about the [Clojure Help Chrome Extension]({% post_url 2017-03-12-cljhelp-extension %}) which added some of the 
+most common file types around: html, js, and json
+
+I won't try to attribute any meaning to these lists, but will likely refer back to them when I do the full year wrapup.
+
